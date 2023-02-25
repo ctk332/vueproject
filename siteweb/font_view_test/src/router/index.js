@@ -1,25 +1,37 @@
 
 
 import { createRouter, createWebHistory } from 'vue-router'
-import index from "../views/home/index.vue"
 import home from "../views/tree/1.vue"
 import home1 from "../views/tree/HelloWorld.vue"
+import gooddetail from "../views/home/gooddetail.vue"
+import main from "../components/Main.vue"
+import Center from "../components/Center.vue"
+import searchright from "../views/home/searchright.vue"
 const routes = [
+  {path:'/', redirect: '/home/main'},
   {
-    path: '/',
-    name: 'index',
-    component: index
+    path: '/home',
+    name: 'home',
+    component: Center,
+    children:[{path:'main',component:main},{path:'gooddetail',component:gooddetail},{path:'searchright',component:searchright}]
   },
-    {
-      path: '/my',
-      name: 'my',
-      component: home
-    },
-    {
-      path: '/home',
-      name: 'home',
-      component: home1
-    }
+ 
+
+  // {
+  //   path: '/gooddetail',
+  //   name: 'gooddetail',
+  //   component: gooddetail
+  // },
+  //   {
+  //     path: '/searchright',
+  //     name: 'searchright',
+  //     component: index
+  //   },
+  //   {
+  //     path: '/home',
+  //     name: 'home',
+  //     component: home1
+  //   }
 ]
 const router=createRouter({
     history:createWebHistory(),

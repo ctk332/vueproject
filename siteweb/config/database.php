@@ -25,9 +25,9 @@ return [
             // 数据库名
             'database'        => env('database.database', 'ad_platform'),
             // 用户名
-            'username'        => env('database.username', 'root'),
+            'username'        => env('database.username', 'ad_platform'),
             // 密码
-            'password'        => env('database.password', '123456'),
+            'password'        => env('database.password', 'e2832e7c3c'),
             // 端口
             'hostport'        => env('database.hostport', '3306'),
             // 数据库连接参数
